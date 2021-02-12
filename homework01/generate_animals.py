@@ -8,7 +8,7 @@ animals['animal']= []
 
 arm= random.randrange(2,10,2)
 leg= random.randrange(3,12,3)
-Homework 01 — COE 332_ Software Engineering & Design documentation.html
+
 for x in range(0,20):
     animals['animal'].append({'head': heads[random.randrange(0,4)],
                               'body': petname.name()+ '-'+ petname.name(),
