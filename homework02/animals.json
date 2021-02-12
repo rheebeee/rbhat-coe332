@@ -1,0 +1,144 @@
+{
+  "animals": [
+    {
+      "head": "snake",
+      "body": "skink-finch",
+      "arms": 8,
+      "legs": 9,
+      "tail": 17
+    },
+    {
+      "head": "raven",
+      "body": "boar-alpaca",
+      "arms": 6,
+      "legs": 9,
+      "tail": 15
+    },
+    {
+      "head": "lion",
+      "body": "pony-maggot",
+      "arms": 4,
+      "legs": 12,
+      "tail": 16
+    },
+    {
+      "head": "bunny",
+      "body": "bull-mayfly",
+      "arms": 10,
+      "legs": 3,
+      "tail": 13
+    },
+    {
+      "head": "bull",
+      "body": "wolf-possum",
+      "arms": 4,
+      "legs": 9,
+      "tail": 13
+    },
+    {
+      "head": "bunny",
+      "body": "tapir-rabbit",
+      "arms": 8,
+      "legs": 3,
+      "tail": 11
+    },
+    {
+      "head": "snake",
+      "body": "orca-ibex",
+      "arms": 2,
+      "legs": 3,
+      "tail": 5
+    },
+    {
+      "head": "bull",
+      "body": "piglet-mouse",
+      "arms": 2,
+      "legs": 9,
+      "tail": 11
+    },
+    {
+      "head": "bunny",
+      "body": "trout-civet",
+      "arms": 4,
+      "legs": 3,
+      "tail": 7
+    },
+    {
+      "head": "raven",
+      "body": "shrew-ocelot",
+      "arms": 10,
+      "legs": 12,
+      "tail": 22
+    },
+    {
+      "head": "snake",
+      "body": "shiner-oyster",
+      "arms": 10,
+      "legs": 6,
+      "tail": 16
+    },
+    {
+      "head": "snake",
+      "body": "guppy-wombat",
+      "arms": 4,
+      "legs": 6,
+      "tail": 10
+    },
+    {
+      "head": "snake",
+      "body": "camel-ghost",
+      "arms": 2,
+      "legs": 3,
+      "tail": 5
+    },
+    {
+      "head": "lion",
+      "body": "jennet-burro",
+      "arms": 10,
+      "legs": 12,
+      "tail": 22
+    },
+    {
+      "head": "snake",
+      "body": "lab-gopher",
+      "arms": 2,
+      "legs": 3,
+      "tail": 5
+    },
+    {
+      "head": "raven",
+      "body": "pig-turkey",
+      "arms": 10,
+      "legs": 9,
+      "tail": 19
+    },
+    {
+      "head": "lion",
+      "body": "shrimp-troll",
+      "arms": 4,
+      "legs": 12,
+      "tail": 16
+    },
+    {
+      "head": "raven",
+      "body": "bat-drake",
+      "arms": 6,
+      "legs": 12,
+      "tail": 18
+    },
+    {
+      "head": "snake",
+      "body": "osprey-mako",
+      "arms": 6,
+      "legs": 3,
+      "tail": 9
+    },
+    {
+      "head": "raven",
+      "body": "mole-pigeon",
+      "arms": 8,
+      "legs": 6,
+      "tail": 14
+    }
+  ]
+}

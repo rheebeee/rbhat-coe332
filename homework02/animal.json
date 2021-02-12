@@ -1,0 +1,144 @@
+{
+  "animals": [
+    {
+      "head": "raven",
+      "body": "amoeba-turkey",
+      "arms": 4,
+      "legs": 6,
+      "tail": 10
+    },
+    {
+      "head": "snake",
+      "body": "thrush-akita",
+      "arms": 8,
+      "legs": 9,
+      "tail": 17
+    },
+    {
+      "head": "bull",
+      "body": "bear-goose",
+      "arms": 8,
+      "legs": 6,
+      "tail": 14
+    },
+    {
+      "head": "lion",
+      "body": "ant-finch",
+      "arms": 10,
+      "legs": 9,
+      "tail": 19
+    },
+    {
+      "head": "snake",
+      "body": "sawfly-serval",
+      "arms": 6,
+      "legs": 3,
+      "tail": 9
+    },
+    {
+      "head": "bull",
+      "body": "foal-snipe",
+      "arms": 10,
+      "legs": 6,
+      "tail": 16
+    },
+    {
+      "head": "lion",
+      "body": "koala-yeti",
+      "arms": 4,
+      "legs": 3,
+      "tail": 7
+    },
+    {
+      "head": "bunny",
+      "body": "donkey-salmon",
+      "arms": 6,
+      "legs": 3,
+      "tail": 9
+    },
+    {
+      "head": "snake",
+      "body": "ghoul-ewe",
+      "arms": 10,
+      "legs": 3,
+      "tail": 13
+    },
+    {
+      "head": "bunny",
+      "body": "macaw-cat",
+      "arms": 4,
+      "legs": 3,
+      "tail": 7
+    },
+    {
+      "head": "snake",
+      "body": "imp-crow",
+      "arms": 4,
+      "legs": 6,
+      "tail": 10
+    },
+    {
+      "head": "bunny",
+      "body": "wolf-tuna",
+      "arms": 2,
+      "legs": 9,
+      "tail": 11
+    },
+    {
+      "head": "bull",
+      "body": "feline-monkey",
+      "arms": 10,
+      "legs": 6,
+      "tail": 16
+    },
+    {
+      "head": "lion",
+      "body": "alien-weevil",
+      "arms": 10,
+      "legs": 12,
+      "tail": 22
+    },
+    {
+      "head": "bunny",
+      "body": "turkey-hyena",
+      "arms": 2,
+      "legs": 12,
+      "tail": 14
+    },
+    {
+      "head": "raven",
+      "body": "muskox-deer",
+      "arms": 4,
+      "legs": 6,
+      "tail": 10
+    },
+    {
+      "head": "lion",
+      "body": "koala-mullet",
+      "arms": 6,
+      "legs": 6,
+      "tail": 12
+    },
+    {
+      "head": "snake",
+      "body": "baboon-mouse",
+      "arms": 4,
+      "legs": 6,
+      "tail": 10
+    },
+    {
+      "head": "bull",
+      "body": "pup-tapir",
+      "arms": 2,
+      "legs": 6,
+      "tail": 8
+    },
+    {
+      "head": "bull",
+      "body": "shark-donkey",
+      "arms": 4,
+      "legs": 6,
+      "tail": 10
+    }
+  ]
+}
