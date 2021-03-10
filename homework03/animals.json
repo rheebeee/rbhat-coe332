@@ -1,0 +1,142 @@
+[
+  {
+    "head": "raven",
+    "body": "oryx-lark",
+    "arms": 8,
+    "legs": 3,
+    "tail": 11
+  },
+  {
+    "head": "raven",
+    "body": "coral-sheep",
+    "arms": 8,
+    "legs": 9,
+    "tail": 17
+  },
+  {
+    "head": "bull",
+    "body": "gnat-bull",
+    "arms": 8,
+    "legs": 3,
+    "tail": 11
+  },
+  {
+    "head": "bull",
+    "body": "loon-tomcat",
+    "arms": 2,
+    "legs": 6,
+    "tail": 8
+  },
+  {
+    "head": "bunny",
+    "body": "bull-cub",
+    "arms": 10,
+    "legs": 12,
+    "tail": 22
+  },
+  {
+    "head": "raven",
+    "body": "goat-mantis",
+    "arms": 6,
+    "legs": 12,
+    "tail": 18
+  },
+  {
+    "head": "bunny",
+    "body": "weevil-egret",
+    "arms": 2,
+    "legs": 6,
+    "tail": 8
+  },
+  {
+    "head": "raven",
+    "body": "gnu-troll",
+    "arms": 4,
+    "legs": 3,
+    "tail": 7
+  },
+  {
+    "head": "bull",
+    "body": "egret-urchin",
+    "arms": 6,
+    "legs": 9,
+    "tail": 15
+  },
+  {
+    "head": "bunny",
+    "body": "panda-mammal",
+    "arms": 10,
+    "legs": 6,
+    "tail": 16
+  },
+  {
+    "head": "bull",
+    "body": "crane-shiner",
+    "arms": 6,
+    "legs": 3,
+    "tail": 9
+  },
+  {
+    "head": "snake",
+    "body": "urchin-rabbit",
+    "arms": 2,
+    "legs": 6,
+    "tail": 8
+  },
+  {
+    "head": "raven",
+    "body": "piglet-baboon",
+    "arms": 8,
+    "legs": 6,
+    "tail": 14
+  },
+  {
+    "head": "snake",
+    "body": "magpie-puma",
+    "arms": 10,
+    "legs": 12,
+    "tail": 22
+  },
+  {
+    "head": "snake",
+    "body": "bug-guppy",
+    "arms": 6,
+    "legs": 12,
+    "tail": 18
+  },
+  {
+    "head": "lion",
+    "body": "pig-elk",
+    "arms": 10,
+    "legs": 3,
+    "tail": 13
+  },
+  {
+    "head": "bull",
+    "body": "squid-moth",
+    "arms": 2,
+    "legs": 9,
+    "tail": 11
+  },
+  {
+    "head": "bull",
+    "body": "joey-monkey",
+    "arms": 2,
+    "legs": 3,
+    "tail": 5
+  },
+  {
+    "head": "lion",
+    "body": "pup-koala",
+    "arms": 8,
+    "legs": 9,
+    "tail": 17
+  },
+  {
+    "head": "lion",
+    "body": "oryx-eel",
+    "arms": 10,
+    "legs": 6,
+    "tail": 16
+  }
+]
