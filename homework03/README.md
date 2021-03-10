@@ -12,6 +12,14 @@ git clone https://github.com/rheebeee/rbhat-coe332.git
 ```
 
 ## **RUNNING:**
+First make sure to open another session and run the Flask server by typing 
+```
+python3 app.py
+```
+Then, to run the commands
+```
+python3 animal_consumer.py
+```
 
 ### **Docker:**
 In order to build an image, run the command:
@@ -35,6 +43,8 @@ docker ps -a
 In order to curl your port run the command:
 
 ```
-curl localhost:5003
+curl localhost:5003?animals/head?name='bunny'
+curl localhost:5003?animals
+curl localhost:5003?animals/legs/?number=6
 ```
 
