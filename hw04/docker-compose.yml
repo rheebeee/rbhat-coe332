@@ -1,0 +1,16 @@
+version: '3'
+services:
+     web:
+        build: .
+        container_name: midterm__rhea
+        ports:
+           - 5070:5000
+        volumes:
+           - ./data/animals.json:/animals.json
+     redis:
+        image: redis:latest
+        ports:
+           - 6383:6379
+        volumes:
+           - ./config/redis.conf:/redis.conf
+        command: [ "redis-server", "/redis.conf" ]
