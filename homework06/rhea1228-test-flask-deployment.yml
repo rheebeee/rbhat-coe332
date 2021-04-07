@@ -1,0 +1,33 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rhea1228-test-flask-deployment
+  labels:
+    username: rhea1228
+    env: test
+    app: rhea1228-test-flask-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      username: rhea1228
+      env: test
+      app: rhea1228-test-flask-app
+  template:
+    metadata:
+      labels:
+        username: rhea1228
+        env: test
+        app: rhea1228-test-flask-app
+    spec:
+      containers:
+        - name: rhea1228-test-flask-deployment
+          imagePullPloicy: Always
+	  image: rheebeee/test_image
+      	  env:
+	  - name: FLASK_APP
+	    value: "app.py"
+	  ports:
+	  - name: http
+	  containerPort: 5000

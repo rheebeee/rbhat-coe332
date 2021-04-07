@@ -1,0 +1,16 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: rhea1228-test-flask
+  labels:
+    username: rhea1228
+    env: test
+spec:
+  type: ClusterIP
+  selector:
+    app: rhea1228-test-flask-app
+  ports:
+  - name: rhea1228-flask-service
+    port: 5000
+    targetPort: 5000
