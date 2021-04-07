@@ -5,6 +5,7 @@
 ``` 
 #Installing the dependencies
 [rhea1228@isp02 hw06]$ kubectl exec -it rhea1228-test-redis-debug-5c79b45878-jbhmq -- /bin/bash
+root@rhea1228-test-redis-debug-5c79b45878-jbhmq:/data# apt-get update && apt-get install -y python3
 root@rhea1228-test-redis-debug-5c79b45878-jbhmq:/data# apt-get install python3-pip
 root@rhea1228-test-redis-debug-5c79b45878-jbhmq:/data# pip3 install redis
 
@@ -27,5 +28,5 @@ True
 ## **Step 4:**
 ```
 [rhea1228@isp02 hw04]$ docker build -t rheebeee/test_image .
-[rhea1228@isp02 hw04]$ docker push rheebeee/test_image .
+[rhea1228@isp02 hw04]$ docker push rheebeee/test_image
 ```
