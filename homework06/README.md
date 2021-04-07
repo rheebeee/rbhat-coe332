@@ -25,4 +25,7 @@ True
 
 
 ## **Step 4:**
-
+```
+[rhea1228@isp02 hw04]$ docker build -t rheebeee/test_image .
+[rhea1228@isp02 hw04]$ docker push rheebeee/test_image .
+```
