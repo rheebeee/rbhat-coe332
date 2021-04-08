@@ -1,5 +1,11 @@
 # Kubernetes Homework06 Responses
 
+## **Steps 1-3:**
+```
+[rhea1228@isp02 hw06]$ kubectl apply -f rhea1228-test-redis-pvc.yml
+[rhea1228@isp02 hw06]$ kubectl apply -f rhea1228-test-redis-deployment.yml
+[rhea1228@isp02 hw06]$ kubectl apply -f rhea1228-test-redis-service.yml
+
 ## **Steps 1-3: Checking My Work**
 1. I used the following commands to set my redis keys:
 ``` 
@@ -27,6 +33,9 @@ True
 
 ## **Step 4:**
 ```
+[rhea1228@isp02 hw06]$ kubectl  apply -f rhea1228-test-flask-deployment.yml
+[rhea1228@isp02 hw06]$ kubectl apply -f rhea1228-test-flask-service.yml
+
 [rhea1228@isp02 hw04]$ docker build -t rheebeee/test_image .
 [rhea1228@isp02 hw04]$ docker push rheebeee/test_image
 ```
