@@ -1,0 +1,28 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rhea1228-hw7-api-deployment
+  labels:
+    app: rhea1228-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: rhea1228-api
+  template:
+    metadata:
+      labels:
+        app: rhea1228-api
+    spec:
+      containers:
+        - name: rhea1228-hw7-api-deployment
+          imagePullPolicy: Always
+          image: rheebeee/animals-service-help
+          command: ['python', 'api.py']
+          env:
+          - name: FLASK_API
+            value: "api.py"
+          ports:
+          - name: http
+            containerPort: 5000

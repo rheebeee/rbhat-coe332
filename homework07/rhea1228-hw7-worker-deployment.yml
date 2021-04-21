@@ -1,0 +1,29 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: rhea1228-hw7-worker-deployment
+  labels:
+    app: rhea1228-worker
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: rhea1228-worker
+  template:
+    metadata:
+      labels:
+        app: rhea1228-worker
+    spec:
+      containers:
+        - name: rhea1228-hw7-worker-deployment
+          imagePullPolicy: Always
+          image: rheebeee/animals-service-help
+          command: ['sh', '-c', 'echo "$WORKER_IP" && sleep 3600']
+          env:
+          - name: FLASK_WORKER
+            value: "worker.py"
+          - name: WORKER_IP
+            valueFrom:
+              fieldRef:
+                fieldPath: status.podIP
