@@ -91,7 +91,7 @@ deployment.apps/rhea1228-hw7-worker-deployment configured
 
 
 2. I added the functionality ```worker_ip = os.environ.get('WORKER_IP')```
-and made a new method ```set_ip()``` that is called in ```worker.py```
+and made a new method ```set_ip(jid)``` that is called in ```worker.py```
 
 
 ## **Part C:**
