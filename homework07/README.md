@@ -11,8 +11,9 @@
 ```
 [rhea1228@isp02 hw07]$ kubectl get services
 NAME                       TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)          AGE
-rhea1228-hw07-test-flask   ClusterIP   10.99.255.170    <none>        5000/TCP         8h
-rhea1228-test-redis              ClusterIP   10.109.236.250   <none>        6379/TCP         14d
+rhea1228-hw07-test-flask   ClusterIP   10.111.21.121    <none>        5000/TCP         2d7h
+rhea1228-test              ClusterIP   10.109.236.250   <none>        6379/TCP         14d
+
 ```
 
 3. I execed into my python debug container & installed my dependencies
@@ -23,7 +24,7 @@ root@rhea1228-test-redis-debug-5c79b45878-jbhmq:/data# apt-get update && apt-get
 root@rhea1228-test-redis-debug-5c79b45878-jbhmq:/data# apt-get install python3-pip
 root@rhea1228-test-redis-debug-5c79b45878-jbhmq:/data# pip3 install redis
 
-root@rhea1228-test-redis-debug-5c79b45878-jbhmq:/data# curl 10.99.255.170:5000
+root@rhea1228-test-redis-debug-5c79b45878-jbhmq:/data# curl 10.111.21.121:5000
 
 ``` 
 
@@ -31,7 +32,7 @@ root@rhea1228-test-redis-debug-5c79b45878-jbhmq:/data# curl 10.99.255.170:5000
 ```
 #I did multiple curl statements to create multiple keys 
 
-root@rhea1228-test-redis-debug-5c79b45878-sp4jp:/data# curl -X POST -H "content-type:       application/json" -d '{"start": "START", "end": "END"}' 10.99.255.170:5000/jobs
+root@rhea1228-test-redis-debug-5c79b45878-sp4jp:/data# curl -X POST -H "content-type:       application/json" -d '{"start": "START", "end": "END"}' 10.111.21.121:5000/jobs
 {"id": "f8ba95eb-8fd3-46d9-9b19-01c46442ea79", "status": "submitted", "start": "START", "end": "END"}
 
 root@rhea1228-test-redis-debug-5c79b45878-sp4jp:/data# python3
@@ -89,10 +90,33 @@ deployment.apps/rhea1228-hw7-worker-deployment configured
 ```
 
 
-2.
+2. I added the functionality ```worker_ip = os.environ.get('WORKER_IP')```
+and made a new method ```set_ip()``` that is called in ```worker.py```
 
 
 ## **Part C:**
 ```
-[rhea1228@isp02 hw06]$ 
+[rhea1228@isp02 source]$ kubectl get pods -o wide
+NAME                                              READY   STATUS    RESTARTS   AGE     IP              NODE     NOMINATED NODE   READINESS GATES
+rhea1228-hw7-worker-deployment-76585f9446-hvqdr   1/1     Running   0          33m     10.244.5.193    c04      <none>           <none>
+rhea1228-hw7-worker-deployment-76585f9446-t6tvb   1/1     Running   0          33m     10.244.12.128  c12      <none>           <none>
+
+
+>>> for key in rd.keys():
+...     rd.hmget(key, 'status')
+...     print(key)
+...
+[b'complete']
+b"job.b'31039c93-28db-4e0d-9990-6d5e4b19e6b4'"
+[worker'complete']
+worker"'10.244.5.193'"
+[b'complete']
+b"job.b'ce37ba28-4eba-4b59-a48f-1a154a95e70b'"
+[worker'complete']
+worker"'10.244.12.128'"
+[b'complete']
+b"job.b'57bcf915-7eb1-4423-8851-b3c4df5b3164'"
+[worker'complete']
+worker"'10.244.12.128'"
+
 ```
