@@ -108,15 +108,15 @@ rhea1228-hw7-worker-deployment-76585f9446-t6tvb   1/1     Running   0          3
 ...
 [b'complete']
 b"job.b'31039c93-28db-4e0d-9990-6d5e4b19e6b4'"
-[worker'complete']
-worker"'10.244.5.193'"
+[b'complete']
+b"worker'10.244.5.193'"
 [b'complete']
 b"job.b'ce37ba28-4eba-4b59-a48f-1a154a95e70b'"
-[worker'complete']
-worker"'10.244.12.128'"
+[b'complete']
+b"worker'10.244.5.193'"
 [b'complete']
 b"job.b'57bcf915-7eb1-4423-8851-b3c4df5b3164'"
-[worker'complete']
-worker"'10.244.12.128'"
+[b'complete']
+b"worker'10.244.5.193'"
 
 ```
