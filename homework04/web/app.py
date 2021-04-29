@@ -112,7 +112,7 @@ def get_total():
 def reset():
     with open("animals.json","r") as json_file:
         animaldata= json.load(json_file)
-    rd.set('rhea-reset', json.dumps(animaldata))
+    rd.set('rhea-data', json.dumps(animaldata))
     return "The database has been cleared."
 
 def getdata():
