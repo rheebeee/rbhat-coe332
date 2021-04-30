@@ -4,21 +4,21 @@
 
 1. Build the docker images & push them to DokerHub
 ```
-[rhea1228@isp02 hw06]$ docker build -t rheebeee/traffic02-service .
-[rhea1228@isp02 hw06]$ docker push rheebeee/traffic02-service
+[rhea1228@isp02 final_proj2]$ docker build -t rheebeee/traffic02-service .
+[rhea1228@isp02 final_proj2]$ docker push rheebeee/traffic02-service
 ```
 2. Build & run the Kubernetes files
 ```
-[rhea1228@isp02 hw06]$ kubectl apply -f traffic02-test-flask-service.yml
-[rhea1228@isp02 hw06]$ kubectl apply -f traffic02-test-redis-deployment.yml
-[rhea1228@isp02 hw06]$ kubectl apply -f traffic02-test-redis-pvc.yml
-[rhea1228@isp02 hw06]$ kubectl apply -f traffic02-test-redis-service.yml
-[rhea1228@isp02 hw06]$ kubectl apply -f traffic02-api-deployment.yml
+[rhea1228@isp02 final_proj2]$ kubectl apply -f traffic02-test-flask-service.yml
+[rhea1228@isp02 final_proj2]$ kubectl apply -f traffic02-test-redis-deployment.yml
+[rhea1228@isp02 final_proj2]$ kubectl apply -f traffic02-test-redis-pvc.yml
+[rhea1228@isp02 final_proj2]$ kubectl apply -f traffic02-test-redis-service.yml
+[rhea1228@isp02 final_proj2]$ kubectl apply -f traffic02-api-deployment.yml
 ```
 
 3. Exec to the Kubernetes container & install the needed dependencies
 ```
-[rhea1228@isp02 hw06]$ kubectl exec -it traffic02-test-redis-deployment-7b7fc4667c-227rq -- /bin/bash
+[rhea1228@isp02 final_proj2]$ kubectl exec -it traffic02-test-redis-deployment-7b7fc4667c-227rq -- /bin/bash
 root@traffic02-worker-deployment-5df7b7bc78-ps6kk:/api# apt-get update && apt-get install -y python3
 root@traffic02-worker-deployment-5df7b7bc78-ps6kk:/api# apt-get install python3-pip
 root@traffic02-worker-deployment-5df7b7bc78-ps6kk:/api# pip3 install redis
