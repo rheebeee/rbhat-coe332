@@ -1,0 +1,15 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: traffic02-test-flask
+  labels:
+    env: test
+spec:
+  type: ClusterIP
+  selector:
+    app: traffic02-api
+  ports:
+  - name: traffic02-test-flask-service
+    port: 5000
+    targetPort: 5000

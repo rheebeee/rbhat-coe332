@@ -1,0 +1,30 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: traffic02-test-redis-deployment
+  labels:
+    env: test
+    app: traffic02-test-redis-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      env: test
+      app: traffic02-test-redis-app
+  template:
+    metadata:
+      labels:
+        env: test
+        app: traffic02-test-redis-app
+    spec:
+      containers:
+        - name: traffic02-test-redis-deployment
+          image: redis:5.0.0
+          volumeMounts:
+          - name: traffic02-test-redis-pvc
+            mountPath: "/data"
+      volumes:
+      - name: traffic02-test-redis-pvc
+        persistentVolumeClaim:
+          claimName: traffic02-test-redis-pvc
