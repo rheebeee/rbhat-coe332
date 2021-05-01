@@ -1,0 +1,25 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: traffic02-worker-deployment
+  labels:
+    app: traffic02-worker
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: traffic02-worker
+  template:
+    metadata:
+      labels:
+        app: traffic02-worker
+    spec:
+      containers:
+        - name: traffic02-worker-deployment
+          imagePullPolicy: Always
+          image: rheebeee/traffic02-service
+          #command: ['sleep','9999']
+          env:
+          - name: FLASK_WORKER
+            value: "worker.py"
