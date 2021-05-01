@@ -39,7 +39,7 @@ traffic02-test-redis       ClusterIP   10.105.231.136   <none>        6379/TCP  
 root@traffic02-worker-deployment-5df7b7bc78-ps6kk:/api# curl 10.99.161.74:5000/reset
 ```
 
-2. I used the following commands to set my redis keys:
+2. I used the following commands to see my redis keys:
 ```
 root@rhea1228-test-redis-debug-5c79b45878-jbhmq:/data# python3
 Python 3.5.3 (default, Apr  5 2021, 09:00:41)
@@ -50,6 +50,9 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> rd_data= redis.StrictRedis(host= '10.105.231.136', port=6379, db=2, decode_responses= True)
 >>> rd_jobs = redis.StrictRedis(host= '10.105.231.136', port=6379, db=0)
 >>> 
+>>> for key in rd_data.keys():
+>>>   print(rd_data.hgetall(key))
+>>>   
 >>> rd.keys()
 
 ```
