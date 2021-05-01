@@ -1,4 +1,13 @@
-# Final Project: Traffic Data
+# Final Project: Traffic Data By: Rhea Bhat
+
+This is my final project for COE332. Within this project, I have built a REST API that utilizes a real-time dataset of traffic incidents that have occured in Austin. There are different app routes avaialable in order to create new data entries into the database, read them, update snippets, and delete old entries.
+
+There are various components to this project:
+1. A Python script to format the data
+2. A Flask API front end for submitting / accessing jobs
+3. A Redis database for storing the dataset
+4. A Redis database for storing job information
+5. A worker back-end which runs the analysis that create an image plot for the user
 
 ## **Building the Files**
 
@@ -34,8 +43,10 @@ traffic02-test-flask       ClusterIP   10.99.161.74     <none>        5000/TCP  
 traffic02-test-redis       ClusterIP   10.105.231.136   <none>        6379/TCP         4d5h
 ```
 
-5. First, reset the database
+## **FLASK API:**
+1. Here are the possible routes for the Traffic02 FLASK API:
 ```
+[rhea1228@isp02 final_proj2]$ kubectl exec -it traffic02-test-redis-deployment-7b7fc4667c-227rq -- /bin/bash
 root@traffic02-worker-deployment-5df7b7bc78-z9547:/api# curl 10.99.161.74:5000/
     Here are the routes:
     /           Instructions
@@ -46,10 +57,15 @@ root@traffic02-worker-deployment-5df7b7bc78-z9547:/api# curl 10.99.161.74:5000/
     /edit       Edits the issue of one of the incidents [UPDATE]
     /delete     Delete an incident from the database [DELETE]
     /reset      Resets the redis database
-    
+```    
+
+2. First, reset the database
+```
 root@traffic02-worker-deployment-5df7b7bc78-z9547:/api# curl 10.99.161.74:5000/reset
 The database has been reset.
-
+```
+3. Here is sample output of each of the routes:
+```
 root@traffic02-worker-deployment-5df7b7bc78-z9547:/api# curl '10.99.161.74:5000/dates?start=2017-10-24T20:15:51.000000Z&end=2018-10-24T20:15:51.000000Z'
 [
   "92640da6-f57b-4e36-bd05-fe806c22714b",
@@ -73,11 +89,10 @@ root@traffic02-worker-deployment-5df7b7bc78-z9547:/api# curl -X POST -H "content
 root@traffic02-worker-deployment-5df7b7bc78-Z9547:/api# curl '10.99.161.74:5000/edit?trafficid='a649a545-4b1c-40c1-815a-c634c28c96d1'&issue='BREAK''
 Traffic ID a649a545-4b1c-40c1-815a-c634c28c96d1 issue has been changed to BREAK
 
-
-
 ```
+## **Redis Database:**
+1. I used the following commands to view my redis database:
 
-2. I used the following commands to test my redis keys:
 ```
 root@rhea1228-test-redis-debug-5c79b45878-jbhmq:/data# python3
 Python 3.5.3 (default, May  1 2021, 09:00:41)
@@ -94,7 +109,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>> 
 >>> #To get all the Traffic ID's  
 >>> rd.keys()
-
 ```
 
+## **Worker &  Jobs:**
 
