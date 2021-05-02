@@ -108,7 +108,7 @@ Type "help", "copyright", "credits" or "license" for more information.
 >>>   print(rd_data.hgetall(key))
 >>> 
 >>> #To get all the Traffic ID's  
->>> rd.keys()
+>>> rd_jobs.keys()
 ```
 
 ## **Worker &  Jobs:**
