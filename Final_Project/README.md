@@ -59,7 +59,7 @@ root@traffic02-worker-deployment-5df7b7bc78-z9547:/api# curl 10.99.161.74:5000/
     /reset      Resets the redis database
 ```    
 
-2. First, reset the database
+2. First, reset the data database to only have the original dataset and the jobs database to be empty.
 ```
 root@traffic02-worker-deployment-5df7b7bc78-z9547:/api# curl 10.99.161.74:5000/reset
 The database has been reset.
