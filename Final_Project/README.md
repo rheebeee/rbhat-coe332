@@ -1,6 +1,6 @@
 # Final Project: Traffic Data By: Rhea Bhat
 
-This is my final project for COE332. Within this project, I have built a REST API that utilizes a real-time dataset of traffic incidents that have occured in Austin. There are different app routes avaialable in order to create new data entries into the database, read them, update snippets, and delete old entries.
+This is my final project for COE332. Within this project, I have built a REST API that utilizes a real-time dataset of traffic incidents that have occured in Austin. There are different app routes available in order to create new data entries into the database, read them, update snippets, and delete old entries. In addition, an analysis operation is performed where traffic incidents between a user-inputted minimum and maximum latitude is plotted over a map of Austin.
 
 There are various components to this project:
 1. A Python script to format the data
@@ -91,6 +91,8 @@ Traffic ID a649a545-4b1c-40c1-815a-c634c28c96d1 issue has been changed to BREAK
 
 ```
 ## **Redis Database:**
+Using the redis database, the dataset and jobs is stored and constantly updated after the user inputs curls commands.
+
 1. I used the following commands to view my redis database:
 
 ```
@@ -112,4 +114,31 @@ Type "help", "copyright", "credits" or "license" for more information.
 ```
 
 ## **Worker &  Jobs:**
+Using asynchronous programming and the queue data structure, we are able to submit jobs and see a graphical analysis of the traffic data.  
+
+1. First, submit a job
+```
+root@traffic02-worker-deployment-5df7b7bc78-68x26:/api# curl -X POST -H "content-type: application/json" -d '{"start": "30.1", "end": "31.3"}' 10.99.161.74:5000/jobs
+{"id": "a5d4637e-005f-414c-80b1-f7f15f05fc29", "status": "submitted", "start": "30.1", "end": "31.3"}
+```
+2. Curl the joblist to see all the submitted jobs and whether they are "submitted", "in progress", or "completed"
+```
+root@traffic02-worker-deployment-5df7b7bc78-68x26:/api# curl 10.99.161.74:5000/joblist
+{
+    "a5d4637e-005f-414c-80b1-f7f15f05fc29": {
+        "status": "complete"
+    }
+}
+```
+3. Use the ```scp``` command to get the image from kubernetes
+```
+root@traffic02-worker-deployment-5df7b7bc78-68x26:/api# scp plot.png rhea1228@isp02.tacc.utexas.edu:/home/rhea1228
+plot.png                                                   100%  227KB   6.3MB/s   00:00
+```
+
+4. Attached below is an example of a plot:
+![plot](https://user-images.githubusercontent.com/71287506/117095489-21abb700-ad2c-11eb-89c8-ad5323ac44ff.png)
+
+
+
 
