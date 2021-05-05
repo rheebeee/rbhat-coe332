@@ -136,7 +136,6 @@ root@traffic02-worker-deployment-5df7b7bc78-68x26:/api# scp plot.png rhea1228@is
 plot.png                                                   100%  227KB   6.3MB/s   00:00
 ```
 
-4. Attached below is an example of a plot:
 ![plot](https://user-images.githubusercontent.com/71287506/117095489-21abb700-ad2c-11eb-89c8-ad5323ac44ff.png)
 
 
